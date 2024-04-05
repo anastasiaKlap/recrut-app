@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import CodeInput from './CodeInput';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const codePattern = [3, '-', 7, '=', 2]; // Przykładowy wzorzec kodu
+
+    return (
+        <div>
+            <h1>Enter Code</h1>
+            <CodeInput codePattern={codePattern} />
+        </div>
+    );
+};
 
 export default App;
